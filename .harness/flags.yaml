@@ -1,27 +1,6 @@
 featureFlags:
   flags:
   - flag:
-      name: new-welcome-message
-      identifier: newwelcomemessage
-      description: ""
-      permanent: false
-      spec:
-        type: boolean
-        default:
-          onVariation: "true"
-          offVariation: "false"
-        variations:
-        - identifier: "true"
-          value: "true"
-        - identifier: "false"
-          value: "false"
-      environments:
-      - identifier: dev
-        default:
-          onVariation: "true"
-          offVariation: "false"
-        state: "off"
-  - flag:
       name: test-feature
       identifier: test_feature
       description: ""
