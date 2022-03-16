@@ -1,6 +1,31 @@
 featureFlags:
   flags:
   - flag:
+      name: fib-algo
+      identifier: fibalgo
+      description: ""
+      permanent: false
+      spec:
+        type: string
+        default:
+          onVariation: binet
+          offVariation: recursive
+        variations:
+        - identifier: recursive
+          value: recursive
+        - identifier: memo
+          value: memo
+        - identifier: loop
+          value: loop
+        - identifier: binet
+          value: binet
+      environments:
+      - identifier: dev
+        default:
+          onVariation: binet
+          offVariation: recursive
+        state: "off"
+  - flag:
       name: new-welcome-message
       identifier: new_welcome_message
       description: ""
