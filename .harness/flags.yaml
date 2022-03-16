@@ -24,7 +24,7 @@ featureFlags:
         default:
           onVariation: binet
           offVariation: recursive
-        state: "off"
+        state: "on"
   - flag:
       name: new-welcome-message
       identifier: new_welcome_message
