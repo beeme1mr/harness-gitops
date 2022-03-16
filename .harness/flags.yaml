@@ -22,7 +22,7 @@ featureFlags:
       environments:
       - identifier: dev
         default:
-          onVariation: binet
+          onVariation: loop
           offVariation: recursive
         state: "on"
   - flag:
