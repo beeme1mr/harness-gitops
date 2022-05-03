@@ -29,6 +29,37 @@ featureFlags:
           onVariation: binet
           offVariation: recursive
         state: "on"
+        rules:
+        - priority: 1
+          serve:
+            distribution:
+              bucketBy: identifier
+              variations:
+              - weight: 25
+                variation: recursive
+              - weight: 25
+                variation: memo
+              - weight: 25
+                variation: loop
+              - weight: 25
+                variation: binet
+          clauses:
+          - attribute: identifier
+            op: starts_with
+            values:
+            - test
+        - priority: 2
+          serve:
+            serveVariation: binet
+          clauses:
+          - attribute: name
+            op: starts_with
+            values:
+            - Hi
+        targetRules:
+        - targets:
+          - identifier: anonymous
+          variation: memo
   - flag:
       name: new-welcome-message
       identifier: newwelcomemessage
