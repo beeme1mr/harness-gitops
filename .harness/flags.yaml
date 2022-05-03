@@ -28,7 +28,7 @@ featureFlags:
         default:
           onVariation: binet
           offVariation: recursive
-        state: "on"
+        state: "off"
         rules:
         - priority: 1
           serve:
