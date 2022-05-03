@@ -6,7 +6,7 @@ featureFlags:
       description: ""
       permanent: false
       spec:
-        type: breaking-stuff
+        type: string
         default:
           onVariation: binet
           offVariation: recursive
