@@ -60,6 +60,11 @@ featureFlags:
         - targets:
           - identifier: anonymous
           variation: memo
+      - identifier: preprod
+        default:
+          onVariation: binet
+          offVariation: recursive
+        state: "off"
   - flag:
       name: new-welcome-message
       identifier: newwelcomemessage
@@ -77,6 +82,11 @@ featureFlags:
           value: "false"
       environments:
       - identifier: dev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: preprod
         default:
           onVariation: "true"
           offVariation: "false"
